@@ -33,6 +33,15 @@ def add_recipe(title, cook_time, ingredients):
     recipe = {
         "title": title,
         "cook_time": int(cook_time),
+        
+        # Cooking times can't be negative or non numeric
+        if cook_time < 0:
+              print("Cook time cannot be negative.")
+
+        except ValueError:
+            print("Cook time must be a number.")
+        #End of changes
+    
         "ingredients": ingredients.split(","),
     }
     recipes.append(recipe)
