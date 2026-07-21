@@ -61,7 +61,13 @@ def delete_recipe(title):
     recipes = load_recipes()
     recipes = [r for r in recipes if r["title"] != title]
     save_recipes(recipes)
-    print(f"Deleted '{title}'")
+    #Added a check to see if the title was in the recipes, 
+    #Prints Deleted if it was
+    #Alerts the user that the title was not in the recipe list
+    if title in recipe:
+        print(f"Deleted '{title}'")
+    else:
+        print(f"{title} was not found")
 
 
 def search_recipes(keyword):
