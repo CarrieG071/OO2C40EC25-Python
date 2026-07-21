@@ -23,8 +23,6 @@ def load_recipes():
         return json.load(f)
 
 
-
-
 def save_recipes(recipes):
     f = open(DATA_FILE, "w")
     json.dump(recipes, f, indent=2)
