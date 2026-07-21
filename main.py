@@ -91,7 +91,7 @@ try:   #added try
     else:
         print(f"Unknown command: {command}")
 except IndexError: # added except and the 2 print statements below.
-    print(f"Error: Missing required arguments for the '{command}' command.")
+    print(f"Error: Sorry your are missing required arguments for the '{command}' command.")
         print(f"Check your syntax and try again.")
     
 
