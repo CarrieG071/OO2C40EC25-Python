@@ -2,12 +2,13 @@
 Recipe Box - a tiny CLI recipe manager.
 
 Usage:
-    python main.py add "Pancakes" 15 "flour,eggs,milk"
+    python main.py add "Pancakes" 15 "Flour,Eggs,Milk"
     python main.py list
     python main.py view "Pancakes"
     python main.py delete "Pancakes"
-    python main.py search "eggs"
+    python main.py search "Eggs"
 """
+# updated puncuation to items
 
 import json
 import os
