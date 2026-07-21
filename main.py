@@ -27,8 +27,11 @@ def save_recipes(recipes):
     f = open(DATA_FILE, "w")
     json.dump(recipes, f, indent=2)
 
-
 def add_recipe(title, cook_time, ingredients):
+   if not title.strip():
+    print("Error: Recipe title cannot be empty.")
+    return
+
     recipes = load_recipes()
     recipe = {
         "title": title,
