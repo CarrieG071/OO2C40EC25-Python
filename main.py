@@ -79,7 +79,8 @@ def delete_recipe(title):
 
 def search_recipes(keyword):
     recipes = load_recipes()
-    matches = [r for r in recipes if keyword in r["ingredients"]]
+    #Phil - my change was made here
+    matches = [r for r in recipes if keyword in r.any()]
     for r in matches:
         print(f"{r['title']} ({r['cook_time']} min)")
 
