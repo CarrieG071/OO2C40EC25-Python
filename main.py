@@ -8,6 +8,7 @@ Usage:
     python main.py delete "Pancakes"
     python main.py search "Eggs"
 """
+# updated puncuation to items
 
 import json
 import os
