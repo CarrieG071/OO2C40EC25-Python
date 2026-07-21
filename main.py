@@ -77,7 +77,7 @@ def main():
         return
 
     command = sys.argv[1]
-
+try:   #added try
     if command == "add":
         add_recipe(sys.argv[2], sys.argv[3], sys.argv[4])
     elif command == "list":
@@ -90,6 +90,10 @@ def main():
         search_recipes(sys.argv[2])
     else:
         print(f"Unknown command: {command}")
+except IndexError: # added except and the 2 print statements below.
+    print(f"Error: Missing required arguments for the '{command}' command.")
+        print(f"Check your syntax and try again.")
+    
 
 
 if __name__ == "__main__":
