@@ -27,7 +27,7 @@ def load_recipes():
 def save_recipes(recipes):
     f = open(DATA_FILE, "w")
     json.dump(recipes, f, indent=2)
-   
+    f.close()
     
 def add_recipe(title, cook_time, ingredients):
    if not title.strip():
